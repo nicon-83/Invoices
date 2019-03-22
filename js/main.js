@@ -52,7 +52,7 @@ $(document).ready(function () {
 
     $.ajax({
         type: "GET",
-        url: 'http://localhost:3000/invoices',
+        url: 'https://nicon83-invoices.herokuapp.com/invoices',
         success: function (data) {
             let table = createTable(data);
             $('#content').append(table);
