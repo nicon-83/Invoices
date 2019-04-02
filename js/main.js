@@ -97,16 +97,14 @@ $(document).ready(function () {
 	});
 
 	//заполнение таблицы первичными данными
-	if (document.URL.indexOf('index.html') !== -1) {
-		$.ajax({
-			type: "GET",
-			url: 'https://nicon83-invoices.herokuapp.com/invoices',
-			success: function (data) {
-				let table = createTable(data);
-				$('#table-content').append(table);
-			}
-		});
-	}
+	$.ajax({
+		type: "GET",
+		url: 'https://nicon83-invoices.herokuapp.com/invoices',
+		success: function (data) {
+			let table = createTable(data);
+			$('#table-content').append(table);
+		}
+	});
 
 	//обработчики событий
 	$('#create-invoice').click(() => window.location = './create.html');
