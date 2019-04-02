@@ -1,0 +1,267 @@
+{
+	"variables": [],
+	"info": {
+		"name": "First_collection",
+		"_postman_id": "48e35362-dcd3-6bc0-2748-a11509161fc2",
+		"description": "Get invoices\nAdd invoice\nUpdate invoice\nDelete invoice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Invoices",
+			"request": {
+				"url": "https://nicon83-invoices.herokuapp.com/invoices",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Get all invoices"
+			},
+			"response": []
+		},
+		{
+			"name": "Add invoice",
+			"request": {
+				"url": {
+					"raw": "https://nicon83-invoices.herokuapp.com/invoices",
+					"protocol": "https",
+					"host": [
+						"nicon83-invoices",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"invoices"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5ac1f09a60edb98701c767fv",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						},
+						{
+							"key": "direction",
+							"value": "8ad47368-b85b-4b25-a209-9a975fa85ba1",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						},
+						{
+							"key": "number",
+							"value": "777666",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						},
+						{
+							"key": "date_created",
+							"value": "01 January 1983",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						},
+						{
+							"key": "date_due",
+							"value": "18 August 2011",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						},
+						{
+							"key": "date_supply",
+							"value": "28 September 2005",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						},
+						{
+							"key": "comment",
+							"value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum convallis massa pellentesque diam faucibus pharetra. Fusce hendrerit dui felis, a rutrum magna facilisis in. Vestibulum nec nisl neque.",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"id\": \"5ac1f09a80edb54701c888fv\",\n        \"direction\": \"8ad47368-b85b-4b66-a209-9b975fa77zal\",\n        \"number\": 999888,\n        \"date_created\": \"31 January 1983\",\n        \"date_due\": \"01 December 2009\",\n        \"date_supply\": \"19 May 2005\",\n        \"comment\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum convallis massa pellentesque diam faucibus pharetra. Fusce hendrerit dui felis, a rutrum magna facilisis in. Vestibulum nec nisl neque.\"\n    }"
+				},
+				"description": "Add new invoice"
+			},
+			"response": []
+		},
+		{
+			"name": "Update invoice",
+			"request": {
+				"url": {
+					"raw": "https://nicon83-invoices.herokuapp.com/invoices/5ac1f09a80edb54701c888fv",
+					"protocol": "https",
+					"host": [
+						"nicon83-invoices",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"invoices",
+						"5ac1f09a80edb54701c888fv"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5ac1f09a60edb98701c767fv",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						},
+						{
+							"key": "direction",
+							"value": "8ad47368-b85b-4b25-a209-9a975fa85ba1",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						},
+						{
+							"key": "number",
+							"value": "777666",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						},
+						{
+							"key": "date_created",
+							"value": "01 January 1983",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						},
+						{
+							"key": "date_due",
+							"value": "18 August 2011",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						},
+						{
+							"key": "date_supply",
+							"value": "28 September 2005",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						},
+						{
+							"key": "comment",
+							"value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum convallis massa pellentesque diam faucibus pharetra. Fusce hendrerit dui felis, a rutrum magna facilisis in. Vestibulum nec nisl neque.",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						}
+					],
+					"variable": []
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n    \t\"direction\": \"8ad47368-b85b-4b66-a209-9b975fa77zal\",\n        \"number\": 555444,\n        \"date_created\": \"31 January 1983\",\n        \"date_due\": \"01 December 2009\",\n        \"date_supply\": \"19 May 2005\",\n        \"comment\": \"Pellentesque quis felis id ipsum faucibus consequat non at velit. Duis scelerisque urna placerat turpis imperdiet, a aliquet justo gravida. Donec convallis risus eu nisi rhoncus, eget tincidunt lacus volutpat.\"\n    }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete invoice",
+			"request": {
+				"url": {
+					"raw": "https://nicon83-invoices.herokuapp.com/invoices/5ac1f09a80edb54701c888fv",
+					"protocol": "https",
+					"host": [
+						"nicon83-invoices",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"invoices",
+						"5ac1f09a80edb54701c888fv"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5ac1f09a60edb98701c767fv",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						},
+						{
+							"key": "direction",
+							"value": "8ad47368-b85b-4b25-a209-9a975fa85ba1",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						},
+						{
+							"key": "number",
+							"value": "777666",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						},
+						{
+							"key": "date_created",
+							"value": "01 January 1983",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						},
+						{
+							"key": "date_due",
+							"value": "18 August 2011",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						},
+						{
+							"key": "date_supply",
+							"value": "28 September 2005",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						},
+						{
+							"key": "comment",
+							"value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum convallis massa pellentesque diam faucibus pharetra. Fusce hendrerit dui felis, a rutrum magna facilisis in. Vestibulum nec nisl neque.",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						}
+					],
+					"variable": []
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"id\": \"5ac1f09a80edb54701c888fv\",\n        \"direction\": \"8ad47368-b85b-4b66-a209-9b975fa77zal\",\n        \"number\": 999888,\n        \"date_created\": \"31 January 1983\",\n        \"date_due\": \"01 December 2009\",\n        \"date_supply\": \"19 May 2005\",\n        \"comment\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum convallis massa pellentesque diam faucibus pharetra. Fusce hendrerit dui felis, a rutrum magna facilisis in. Vestibulum nec nisl neque.\"\n    }"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

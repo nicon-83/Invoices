@@ -1,0 +1,42 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Second_collection",
+		"_postman_id": "3a5f43d6-b177-db43-3153-546752ecde7f",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Filter",
+			"request": {
+				"url": {
+					"raw": "https://nicon83-invoices.herokuapp.com/invoices?{{key}}={{value}}",
+					"protocol": "https",
+					"host": [
+						"nicon83-invoices",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"invoices"
+					],
+					"query": [
+						{
+							"key": "{{key}}",
+							"value": "{{value}}",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
