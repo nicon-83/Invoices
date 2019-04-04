@@ -3,12 +3,19 @@
 <head>
 		<meta charset="UTF-8">
 		<title>Invoices</title>
+		<style>
+				.hidden {
+						display: none !important;
+				}
+		</style>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+		      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 		<script src="./dist/build.js"></script>
 </head>
 <body class="bg-light">
 <div class="container mb-5 mt-5">
-		<h4 class="text-secondary mb-4">Invoices</h4>
-		<div class="card mb-4">
+		<h4 class="text-secondary mb-4" id="page-title">Invoices</h4>
+		<div class="card mb-4" id="add-button">
 				<div class="card-body">
 						<h5 class="card-title">Actions</h5>
 						<button id="create-invoice" class="btn btn-primary col-2">Add new</button>
@@ -16,9 +23,9 @@
 		</div>
 		<div class="card">
 				<div id="content" class="card-body">
-						<h5 class="card-title">Invoices</h5>
+						<h5 class="card-title" id="title">Invoices</h5>
 
-						<form class="form-inline bg-light p-4 mb-3 rounded" action="">
+						<form class="form-inline bg-light p-4 mb-3 rounded" action="" id="filters-form">
 								<div class="form-group form-row">
 
 										<label for="search" class="col-form-label col-form-label-sm font-weight-bold">Search:</label>
@@ -47,7 +54,6 @@
 						<div id="table-content"></div>
 				</div>
 		</div>
-
 </div>
 </body>
 </html>
