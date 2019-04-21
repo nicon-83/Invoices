@@ -10,7 +10,7 @@ window.$ = $;
 function createTable(data) {
 
 	let table = $('<table/>');
-	table.addClass('table');
+	table.addClass('table table-striped');
 	let thead = $('<thead/>');
 	thead.addClass('thead-light');
 	let thead_tr = $('<tr/>');
