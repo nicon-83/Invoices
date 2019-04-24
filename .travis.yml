@@ -5,8 +5,11 @@ node_js:
 
 before_install:
   - npm install
+  - npm install -g newman
 
 script:
+  - newman run ./job1/First_collection.postman_collection.json
+  - newman run ./job1/Second_collection.postman_collection.json
   - npm run build
 
 deploy:
