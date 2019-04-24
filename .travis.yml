@@ -1,0 +1,17 @@
+language: node_js
+
+node_js:
+  - "6"
+
+before_install:
+  - npm install
+
+script:
+  - npm run build
+
+deploy:
+  provider: script
+  skip_cleanup: true
+  script: bash scripts/deploy-to-gh-pages.sh $TRAVIS_BRANCH
+  on:
+    all_branches: true

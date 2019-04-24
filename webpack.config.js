@@ -19,7 +19,7 @@ module.exports = {
         ]
     },
 
-    watch: true,
+    watch: false,
 
     plugins: [
         new webpack.ProvidePlugin({

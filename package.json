@@ -1,8 +1,12 @@
 {
   "name": "test-job",
   "version": "1.0.0",
-  "description": "",
+  "description": "Test work for IVS school",
   "main": "webpack.config.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nicon-83/Invoices.git"
+  },
   "dependencies": {
     "bootstrap": "^4.3.1",
     "bootstrap-datepicker": "^1.8.0",
